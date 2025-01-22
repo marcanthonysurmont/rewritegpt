@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'flatfile'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,6 +31,10 @@ return [
 
     'connections' => [
 
+        'flatfile' => [
+
+        ],
+        
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
@@ -126,8 +130,7 @@ return [
     */
 
     'migrations' => [
-        'table' => 'migrations',
-        'update_date_on_publish' => true,
+        'table' => 'null',
     ],
 
     /*

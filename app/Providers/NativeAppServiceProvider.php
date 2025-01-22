@@ -5,9 +5,6 @@ namespace App\Providers;
 use Native\Laravel\Facades\MenuBar;
 use Native\Laravel\Contracts\ProvidesPhpIni;
 use Native\Laravel\Facades\GlobalShortcut;
-use Illuminate\Support\Facades\Artisan;
-use App\Models\Information;
-use Database\Seeders\InformationSeeder;
 
 use App\Events\ProcessCopiedTextEvent;
 
@@ -19,10 +16,6 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        if(Information::count() === 0) {
-            Artisan::call('db:seed', ['--class' => InformationSeeder::class]);
-        }
-
         MenuBar::create()
             ->icon(storage_path('app/menuBarIconTemplate.png'))
             ->width(550)

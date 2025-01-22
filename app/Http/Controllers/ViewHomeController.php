@@ -4,15 +4,20 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Information;
+use Illuminate\Support\Facades\File;
 
 class ViewHomeController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke()
     {
-        $information = Information::first();
+        $configPath = storage_path('app/config.json');
 
-        return view('home', compact('information'));
+        if (File::exists($configPath)) {
+            $config = json_decode(File::get($configPath), true);
+        } else {
+            $config = [];
+        }
+
+        return view('home', ['config' => $config]);
     }
 }

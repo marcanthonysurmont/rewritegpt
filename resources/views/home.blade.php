@@ -40,7 +40,7 @@
                                 id="rewrite"
                                 name="prompt"
                                 value="1"
-                                @if(isset($information->prompt_id) && $information->prompt_id === 1) checked @endif
+                                @if(isset($config['prompt_id']) && $config['prompt_id'] === 1) checked @endif
                                 data-language-trigger
                                 class="h-4 w-4 text-blue-700 bg-gray-700 border-gray-600 focus:ring-blue-700 focus:ring-offset-gray-800"
                             >
@@ -54,7 +54,7 @@
                                 id="translate"
                                 name="prompt"
                                 value="2"
-                                @if(isset($information->prompt_id) && $information->prompt_id === 2) checked @endif
+                                @if(isset($config['prompt_id']) && $config['prompt_id'] === 2) checked @endif
                                 data-language-trigger
                                 class="h-4 w-4 text-blue-700 bg-gray-700 border-gray-600 focus:ring-blue-700 focus:ring-offset-gray-800"
                             >
@@ -68,7 +68,7 @@
                         id="languageSelect"
                         name="language"
                         class="w-full rounded-md bg-gray-700 border-gray-600 text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-gray-600"
-                        style="display: {{ isset($information->prompt_id) && $information->prompt_id === 2 ? 'block' : 'none' }}"
+                        style="display: {{ isset($config['prompt_id']) && $config['prompt_id'] === 2 ? 'block' : 'none' }}"
                         >
                         <option value="Afrikaans">Afrikaans</option>
                         <option value="Albanian">Albanian</option>
@@ -177,7 +177,7 @@
                     name="api_key"
                     id="api_key"
                     placeholder="Enter your OpenAI API key here..."
-                    value="{{ $information->api_key ?? '' }}"
+                    value="{{ $config['api_key'] ?? '' }}"
                     class="w-full rounded-md bg-gray-700 border-gray-600 text-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-700 focus:border-transparent placeholder-gray-400 blur-[2px] focus:blur-none transition-all duration-300"
                     />
                 </div>
