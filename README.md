@@ -16,7 +16,7 @@ RewriteGPT is a lightweight text rewriting tool powered by OpenAI. It allows you
 
 ## Setup
 1. Open the application and navigate to the **Settings** tab.
-2. Enter your OpenAI API key. *(If you don't have one, get it at [OpenAI](https://openai.com](https://platform.openai.com/api-keys)**))*
+2. Enter your OpenAI API key. *(If you don't have one, get it at [OpenAI](https://openai.com](https://platform.openai.com/api-keys))*
 3. Save the settings.
 
 ![Settings Screenshot](https://github.com/user-attachments/assets/115ca286-b968-4943-a0e4-9c5587103b95)
