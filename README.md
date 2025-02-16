@@ -26,7 +26,7 @@ RewriteGPT is a lightweight text rewriting tool powered by OpenAI. It allows you
 2. **Press `Ctrl + Alt + C`** (`Cmd + Option + C` on macOS) to rewrite the text.
 3. The rewritten text will automatically replace the original in your clipboard.
 
-![Usage Demo]()
+![Usage Demo](https://github.com/user-attachments/assets/1ab6e693-0684-4f22-8366-7ca6d61889e1)
 
 ## Support
 For issues or feature requests, please check the [Issues](https://github.com/marcanthonysurmont/rewritegpt/issues) tab.
